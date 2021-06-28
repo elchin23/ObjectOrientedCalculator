@@ -49,6 +49,7 @@
             this.button18 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button20 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -60,6 +61,7 @@
             this.textBox1.Size = new System.Drawing.Size(238, 85);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             // 
             // button1
             // 
@@ -279,11 +281,22 @@
             this.label1.Size = new System.Drawing.Size(0, 29);
             this.label1.TabIndex = 20;
             // 
+            // button20
+            // 
+            this.button20.Location = new System.Drawing.Point(86, -3);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(75, 23);
+            this.button20.TabIndex = 21;
+            this.button20.Text = "cos(x)";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.Button20_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(287, 370);
+            this.Controls.Add(this.button20);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.button18);
@@ -335,6 +348,7 @@
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button20;
     }
 }
 

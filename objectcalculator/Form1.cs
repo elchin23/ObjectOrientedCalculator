@@ -17,7 +17,7 @@ namespace calculator
             InitializeComponent();
         }
 
-        float a, b;
+        double a, b;
         int count;
         bool znak = true;
 
@@ -39,6 +39,10 @@ namespace calculator
                     break;
                 case 4:
                     b = a / float.Parse(textBox1.Text);
+                    textBox1.Text = b.ToString();
+                    break;
+                case 5:
+                    b = Math.Cos(a);
                     textBox1.Text = b.ToString();
                     break;
 
@@ -169,6 +173,20 @@ namespace calculator
                 textBox1.Text = textBox1.Text.Replace("-", "");
                 znak = true;
             }
+        }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button20_Click(object sender, EventArgs e)
+        {
+            a = float.Parse(textBox1.Text);
+            textBox1.Clear();
+            count = 5;
+            label1.Text = "cos (" + a.ToString() + ")";
+            znak = true;
         }
 
         private void Button2_Click(object sender, EventArgs e)
